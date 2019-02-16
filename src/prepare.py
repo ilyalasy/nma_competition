@@ -10,13 +10,13 @@ from bs4 import BeautifulSoup
 
 # NOTE: You may override this if you want :)
 DEFAULT_DATA_PATH = os.path.abspath(
-    os.path.join(__file__, '..', '..', '..', 'data')
+    os.path.join(__file__, '..', '..', 'data')
 )
 
 
 def quote_str_to_list(txt):
     try:
-        result = literal_eval(txt)        
+        return literal_eval(txt)        
     except Exception:
         return ['ERROR PARSING QUOTES']
 
